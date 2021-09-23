@@ -53,6 +53,14 @@ SIDE LEFT
     border-left: 2px solid #ADFF2F;
 }
 
+.home:hover {
+    color: white;
+}
+
+.home:hover img {
+    filter: invert(88%) sepia(100%) saturate(0%) hue-rotate(304deg) brightness(108%) contrast(101%);
+}
+
 .search, .bookshelf {
     color: #A3A3A3;
 }
@@ -64,6 +72,35 @@ SIDE LEFT
 
 .side_menu span {
     font-size: 12px;
+    font-weight: 500;
+}
+
+.playlist {
+    color: #A3A3A3;
+    padding: 0 15px;
+    margin-top: 15px;
+}
+
+.playlist h2 {
+    color: white;
+    font-size: 14px;
+}
+
+.playlist .add_playlist i {
+    font-size: 36px;
+    vertical-align: middle;
+}
+
+.playlist .add_playlist {
+    font-size: 14px;
+    font-weight: 500;
+    margin: 10px 0;
+}
+
+.list_playlist ul {
+    list-style: none;
+    line-height: 32px;
+    font-size: 13px;
     font-weight: 500;
 }
 
