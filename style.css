@@ -159,20 +159,43 @@ SIDE LEFT
     margin-right: 8px;
 }
 
-
 /******************* 
-MAIN
+CONTENT
 *******************/
 .content {
     width: calc(100% - 200px);
     height: 100%;
 }
 
+/* calltoaction */
 .calltoaction {
     background-color: #080B12;
     height: 90px;
+    display: flex;
+    justify-content: flex-end;
 }
 
+.button {
+    align-self: center;
+    margin-right: 20px;
+}
+
+.button_upgrade {
+    padding: 12px 40px;
+    font-size: 12px;
+    font-weight: 600;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+    border: 1px solid white;
+    border-radius: 50px;
+}
+
+.button:hover {
+    transform: scale(1.1);
+}
+
+/* main */
 main {
     background-color: #141922;
     overflow: auto;
