@@ -20,7 +20,8 @@
 .bookshelf:hover,
 .add_playlist:hover,
 .playlist a:hover,
-.download a:hover {
+.download a:hover,
+.menu a:hover {
     color: white;
 }
 
@@ -198,10 +199,33 @@ CONTENT
 /* main */
 main {
     background-color: #141922;
-    overflow: auto;
+    overflow-y: auto;
+    overflow-x: hidden;
     height: calc(100% - 90px);
 }
 
+.menu {
+    text-align: center;
+    list-style: none;
+    padding: 20px 0;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #A3A3A3;
+    text-transform: uppercase;
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 500;
+    margin: 0 10px;
+}
+
+.row {
+    display: flex;
+    flex-basis: 100px;
+    flex-shrink: 1;
+    width: calc(100% / 6);
+}
 
 /******************* 
 FOOTER
