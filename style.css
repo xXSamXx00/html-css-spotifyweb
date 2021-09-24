@@ -251,6 +251,10 @@ main {
     width: calc(100% / 6);
 }
 
+.img {
+    height: 16vh;
+}
+
 .row img {
     width: 100%;
 }
@@ -273,6 +277,9 @@ main {
     height: 100%;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.3);
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 .play_hover {
@@ -282,6 +289,14 @@ main {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+.layover {
+    visibility: hidden;
+}
+
+.layover:hover {
+    visibility: visible;
 }
 
 .radius img {
