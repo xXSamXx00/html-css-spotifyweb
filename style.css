@@ -57,11 +57,15 @@ SIDE LEFT
 }
 
 /* side_top */
-.logo{
+.logo img:last-child {
+    display: none;
+}
+
+.logo {
     height: 90px;
 }
 
-.logo img {
+.logo img:first-child {
     width: 80%;
     padding: 20px 16px;
 }
@@ -417,4 +421,128 @@ footer {
     color: white;
     font-size: 12px;
     margin-right: 14px;
+}
+
+@media screen and (max-width: 876px) {
+    /* Main */
+    .container {
+        width: 92%;
+    }
+
+    .col {
+        width: calc(100% / 4);
+    }
+
+    .menu {
+        width: 90%;
+        margin: auto;
+    }
+
+    .menu a:last-child {
+        margin-top: 40px;
+    }
+
+    /* Footer */
+
+}
+
+@media screen and (max-width: 656px) {
+    /* Main */
+    .container {
+        width: 92%;
+    }
+
+    .col {
+        width: calc(100% / 2);
+    }
+
+    .menu {
+        width: 90%;
+        margin: auto;
+    }
+
+    .menu a:last-child {
+        margin-top: 40px;
+    }
+
+    /* Footer */
+    
+}
+
+@media screen and (max-width: 568px) {
+    /* common */
+    .content {
+        width: calc(100% - 50px);
+    }
+    
+    .container {
+        width: 92%;
+    }
+    
+    /* side_left */
+    .side_left {
+        width: 50px;
+    }
+    
+    .logo {
+        height: 36%;
+    }
+    
+    .logo img:first-child,
+    .side_menu span,
+    .playlist,
+    .download a span,
+    .profile span {
+        display: none;
+    }
+
+    .logo img:last-child {
+        display: block;
+        width: 100%;
+        padding: 5px 10px;
+    }
+
+    .side_menu img,
+    .side_bottom .download img {
+        width: 100%;
+    }
+
+    .home,
+    .download {
+        border: 0;
+    }
+
+    .home,
+    .search,
+    .bookshelf {
+        padding: 0 12px;
+    }
+
+    /* Main */
+    .col {
+        width: calc(100% / 2);
+    }
+
+    .menu {
+        width: 90%;
+        margin: auto;
+    }
+
+    .menu a:last-child {
+        margin-top: 40px;
+    }
+
+    /* Footer */
+    .like {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .like i {
+        margin-top: 5px;
+    }
+
+    .name_music {
+        margin: 0 8px;
+    }
 }
