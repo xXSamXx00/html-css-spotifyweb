@@ -238,6 +238,22 @@ main {
     margin: 0 10px;
 }
 
+.br_bottom {
+    position: relative;
+}
+
+.br_bottom::after {
+    content:"";
+    width: 30px;
+    height: 2px;
+    background-color: #ADFF2F;
+    display: block;
+    position:absolute;
+    left: 50%;
+    bottom: -5px;
+    transform:translateX(-50%)
+}
+
 .container {
     width: 96%;
     margin: auto;
@@ -464,8 +480,12 @@ footer {
         width: 92%;
     }
 
+    .row {
+        flex-wrap: wrap;
+    }
+
     .col {
-        width: calc(100% / 4);
+        width: calc(100% / 4 - 12px);
     }
 
     .menu {
@@ -490,7 +510,7 @@ footer {
     }
 
     .col {
-        width: calc(100% / 2);
+        width: calc(100% / 2 - 12px);
     }
 
     .menu {
@@ -558,10 +578,6 @@ footer {
     }
 
     /* Main */
-    .col {
-        width: calc(100% / 2);
-    }
-
     .menu {
         width: 90%;
         margin: auto;
