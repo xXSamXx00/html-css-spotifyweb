@@ -47,13 +47,13 @@
 SIDE LEFT
 *******************/
 .side_left {
-    justify-self: flex-start;
-    background-color: black;
-    width: 230px;
-    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    background-color: black;
+    width: 230px;
+    height: 100%;
+    overflow: hidden;
 }
 
 /* side_top */
@@ -104,6 +104,7 @@ SIDE LEFT
     color: #A3A3A3;
     padding: 0 15px;
     margin-top: 15px;
+    overflow: hidden;
 }
 
 .playlist h2 {
@@ -123,11 +124,13 @@ SIDE LEFT
     cursor: pointer;
 }
 
-.list_playlist ul {
+.list_playlist {
     list-style: none;
     line-height: 32px;
     font-size: 12px;
     font-weight: 500;
+    overflow-y: auto;
+    height: calc(100% - 36px);
 }
 
 .playlist a {
@@ -375,9 +378,9 @@ footer {
 }
 
 .music_button a {
-    font-size: 18px;
+    font-size: 16px;
     color: white;
-    margin-right: 30px;
+    margin-right: 25px;
 }
 
 .music_button .play_button {
@@ -405,9 +408,41 @@ footer {
 }
 
 .bar {
-    height: 3px;
+    height: 4px;
     width: 100%;
+    background-color: #5A5A5A;
+    border-radius: 6px;
+    position: relative;
+    cursor: pointer;
+}
+
+.time_bar {
+    position: absolute;
+    top: 0;
+    left: 0;
     background-color: #C1C1C1;
+    height: 4px;
+    width: 21%;
+    border-radius: 6px;
+}
+
+.point {
+    position: absolute;
+    top: -4px;
+    left: 20%;
+    background-color: white;
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    display: none;
+}
+
+.bar:hover .time_bar {
+    background-color: #ADFF2F;
+}
+
+.bar:hover .point {
+    display: block;
 }
 
 .volume {
@@ -443,7 +478,9 @@ footer {
     }
 
     /* Footer */
-
+    .music_time {
+        width: 85%;
+    }
 }
 
 @media screen and (max-width: 656px) {
@@ -466,7 +503,9 @@ footer {
     }
 
     /* Footer */
-    
+    .volume a {
+        margin-right: 6px;
+    }
 }
 
 @media screen and (max-width: 568px) {
