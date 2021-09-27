@@ -130,7 +130,8 @@ SIDE LEFT
     font-size: 12px;
     font-weight: 500;
     overflow-y: auto;
-    height: calc(100% - 36px);
+    height: calc(100vh - 460px);
+    min-height: 100px;
 }
 
 .playlist a {
